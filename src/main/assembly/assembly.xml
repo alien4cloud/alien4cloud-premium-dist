@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+    <id>dist</id>
+    <!-- Generates an archive and a dir containing the needed files;
+    can add e.g. zip to the following
+    (but executable bit is not preserved) -->
+    <formats>
+        <format>dir</format>
+        <format>tar.gz</format>
+    </formats>
+    <!--
+       Adds startup scripts to the root directory of zip package. The startup
+       scripts are located to src/main/scripts directory as stated by Maven
+       conventions.
+    -->
+    <fileSets>
+        <fileSet>
+            <directory>src/main/assembly/scripts</directory>
+            <outputDirectory></outputDirectory>
+            <fileMode>0755</fileMode>
+            <filtered>true</filtered>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+        <!--  add additional files (but not marked executable) -->
+        <fileSet>
+            <directory>src/main/assembly/files</directory>
+            <outputDirectory></outputDirectory>
+            <fileMode>0644</fileMode>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>target/alien</directory>
+            <outputDirectory></outputDirectory>
+            <fileMode>0644</fileMode>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>target/plugins</directory>
+            <outputDirectory>init/plugins</outputDirectory>
+            <fileMode>0644</fileMode>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <files>
+        <file>
+            <source>target/archives/tosca-normative-types.zip</source>
+            <outputDirectory>init/archives</outputDirectory>
+            <destName>1-alien-tosca-normative-types.zip</destName>
+            <fileMode>0644</fileMode>
+        </file>
+        <file>
+            <source>target/archives/alien-base-types.zip</source>
+            <outputDirectory>init/archives</outputDirectory>
+            <destName>2-alien-base-types.zip</destName>
+            <fileMode>0644</fileMode>
+        </file>
+        <file>
+            <source>target/archives/alien-premium-storage-types.zip</source>
+            <outputDirectory>init/archives</outputDirectory>
+            <destName>3-alien-premium-storage-types.zip</destName>
+            <fileMode>0644</fileMode>
+        </file>
+    </files>
+</assembly>

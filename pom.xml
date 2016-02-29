@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>alien4cloud</groupId>
+    <artifactId>a4c-premium-dist</artifactId>
+    <version>1.2.0-SM1-SNAPSHOT</version>
+
+    <name>Alien 4 Cloud Premium Distribution</name>
+
+    <description>Package alien 4 cloud premium with correct structure and scripts.</description>
+
+    <distributionManagement>
+        <repository>
+            <id>repo.opensource.fastconnect.org</id>
+            <url>https://fastconnect.org/maven/content/repositories/opensource</url>
+        </repository>
+        <snapshotRepository>
+            <id>repo.opensource.snapshot.fastconnect.org</id>
+            <url>https://fastconnect.org/maven/content/repositories/opensource-snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <properties>
+        <java.version>1.7</java.version>
+        <maven.compiler.version>2.3.2</maven.compiler.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>alien4cloud</groupId>
+            <artifactId>alien4cloud-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>1.0-m3</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.3.2</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>alien4cloud.packager.ArchiveDownloader</mainClass>
+                    <classpathScope>test</classpathScope>
+                    <arguments>
+                        <argument>${project.build.directory}</argument>
+                        <argument>ngouagna</argument>
+                        <argument>samila89</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>alien4cloud</groupId>
+                                    <artifactId>alien4cloud-ui</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>war</type>
+                                    <classifier>standalone</classifier>
+                                    <destFileName>alien4cloud-ui-${project.version}.war</destFileName>
+                                    <outputDirectory>${project.build.directory}/alien</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>alien4cloud</groupId>
+                                    <artifactId>alien4cloud-cloudify3-provider-premium</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>zip</type>
+                                    <destFileName>alien4cloud-cloudify3-provider-${project.version}.zip</destFileName>
+                                    <outputDirectory>${project.build.directory}/plugins</outputDirectory>
+                                </artifactItem>
+                                <!-- <artifactItem>
+                                    <groupId>alien4cloud</groupId>
+                                    <artifactId>alien4cloud-cloudify3-provider</artifactId>
+                                    <version>1.1.0</version>
+                                    <type>zip</type>
+                                    <destFileName>alien4cloud-cloudify3-provider-${project.version}.zip</destFileName>
+                                    <outputDirectory>${project.build.directory}/plugins</outputDirectory>
+                                </artifactItem> -->
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <finalName>alien4cloud</finalName>
+                    <descriptors>
+                        <descriptor>src/main/assembly/assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
