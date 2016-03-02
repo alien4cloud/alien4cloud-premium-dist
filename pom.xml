@@ -10,14 +10,20 @@
 
     <description>Package alien 4 cloud premium with correct structure and scripts.</description>
 
+    <repositories>
+      <repository>
+          <id>repo.internal.fastconnect.org</id>
+          <url>https://fastconnect.org/maven/content/repositories/fastconnect</url>
+      </repository>
+    </repositories>
     <distributionManagement>
         <repository>
-            <id>repo.opensource.fastconnect.org</id>
-            <url>https://fastconnect.org/maven/content/repositories/opensource</url>
+            <id>repo.internal.fastconnect.org</id>
+            <url>https://fastconnect.org/maven/content/repositories/fastconnect</url>
         </repository>
         <snapshotRepository>
-            <id>repo.opensource.snapshot.fastconnect.org</id>
-            <url>https://fastconnect.org/maven/content/repositories/opensource-snapshot</url>
+            <id>repo.internal.snapshot.fastconnect.org</id>
+            <url>https://fastconnect.org/maven/content/repositories/fastconnect-snapshot</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -67,8 +73,8 @@
                     <classpathScope>test</classpathScope>
                     <arguments>
                         <argument>${project.build.directory}</argument>
-                        <argument>ngouagna</argument>
-                        <argument>samila89</argument>
+                        <argument>alien4cloud-os</argument>
+                        <argument>Op3nSt@ck_@L1eN</argument>
                     </arguments>
                 </configuration>
             </plugin>
