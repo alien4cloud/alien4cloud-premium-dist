@@ -106,6 +106,7 @@ saml:
   metadata:
     idp:
       url: "https://idp.ssocircle.com/idp-meta.xml"
+      file: "/path/to/file.xml"
     sp:
       entityId: "org:alien4cloud:sp"
       # entityBaseURL: defaults to localhost:8088

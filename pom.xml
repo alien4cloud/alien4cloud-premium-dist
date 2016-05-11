@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>alien4cloud</groupId>
@@ -11,10 +12,10 @@
     <description>Package alien 4 cloud premium with correct structure and scripts.</description>
 
     <repositories>
-      <repository>
-          <id>repo.internal.fastconnect.org</id>
-          <url>https://fastconnect.org/maven/content/repositories/fastconnect</url>
-      </repository>
+        <repository>
+            <id>repo.internal.fastconnect.org</id>
+            <url>https://fastconnect.org/maven/content/repositories/fastconnect</url>
+        </repository>
     </repositories>
     <distributionManagement>
         <repository>
@@ -100,20 +101,37 @@
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>alien4cloud</groupId>
+                                    <artifactId>alien4cloud-premium-security</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>war</type>
+                                    <classifier>standalone</classifier>
+                                    <destFileName>alien4cloud-premium-security-${project.version}.war</destFileName>
+                                    <outputDirectory>${project.build.directory}/alien</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>alien4cloud</groupId>
                                     <artifactId>alien4cloud-cloudify3-provider-premium</artifactId>
                                     <version>${project.version}</version>
                                     <type>zip</type>
                                     <destFileName>alien4cloud-cloudify3-provider-${project.version}.zip</destFileName>
                                     <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                                 </artifactItem>
-                                <!-- <artifactItem>
+                                <artifactItem>
                                     <groupId>alien4cloud</groupId>
-                                    <artifactId>alien4cloud-cloudify3-provider</artifactId>
-                                    <version>1.1.0</version>
+                                    <artifactId>alien4cloud-portability-insights</artifactId>
+                                    <version>${project.version}</version>
                                     <type>zip</type>
-                                    <destFileName>alien4cloud-cloudify3-provider-${project.version}.zip</destFileName>
+                                    <destFileName>alien4cloud-portability-insights-${project.version}.zip</destFileName>
                                     <outputDirectory>${project.build.directory}/plugins</outputDirectory>
-                                </artifactItem> -->
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>alien4cloud</groupId>
+                                    <artifactId>a4c-dashboard-plugin</artifactId>
+                                    <version>1.1.0-SM3-SNAPSHOT</version>
+                                    <type>zip</type>
+                                    <destFileName>a4c-dashboard-plugin-1.1.0-SM3-SNAPSHOT.zip</destFileName>
+                                    <outputDirectory>${project.build.directory}/plugins</outputDirectory>
+                                </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
