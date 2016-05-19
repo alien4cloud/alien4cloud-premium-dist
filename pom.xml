@@ -103,9 +103,7 @@
                                     <groupId>alien4cloud</groupId>
                                     <artifactId>alien4cloud-premium-security</artifactId>
                                     <version>${project.version}</version>
-                                    <type>war</type>
-                                    <classifier>standalone</classifier>
-                                    <destFileName>alien4cloud-premium-security-${project.version}.war</destFileName>
+                                    <destFileName>alien4cloud-premium-security-${project.version}.jar</destFileName>
                                     <outputDirectory>${project.build.directory}/alien</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
