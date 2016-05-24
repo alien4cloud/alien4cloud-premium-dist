@@ -31,7 +31,7 @@
     <properties>
         <java.version>1.7</java.version>
         <maven.compiler.version>2.3.2</maven.compiler.version>
-        <search-guard-ssl.version>1.7.0-SNAPSHOT</search-guard-ssl.version>
+        <search-guard-ssl.version>1.7.0</search-guard-ssl.version>
     </properties>
 
     <dependencies>
