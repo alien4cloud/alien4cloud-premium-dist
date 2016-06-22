@@ -125,6 +125,14 @@
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>alien4cloud</groupId>
+                                    <artifactId>alien4cloud-premium-logs</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>zip</type>
+                                    <destFileName>alien4cloud-premium-logs-${project.version}.zip</destFileName>
+                                    <outputDirectory>${project.build.directory}/plugins</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>alien4cloud</groupId>
                                     <artifactId>a4c-dashboard-plugin</artifactId>
                                     <version>${project.version}</version>
                                     <type>zip</type>
