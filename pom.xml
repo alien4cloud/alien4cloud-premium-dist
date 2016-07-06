@@ -16,6 +16,11 @@
             <url>https://fastconnect.org/maven/content/repositories/fastconnect</url>
         </repository>
     </repositories>
+
+    <scm>
+      <connection>scm:git:https://fastconnect.org/gitlab/alien4cloud/alien4cloud-premium-dist.git</connection>
+    </scm>
+
     <distributionManagement>
         <repository>
             <id>repo.internal.fastconnect.org</id>
