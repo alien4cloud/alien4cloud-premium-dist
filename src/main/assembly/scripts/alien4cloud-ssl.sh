@@ -24,6 +24,6 @@ if [ -z "$JAVA_OPTIONS" ] ; then
 fi
 
 $JAVA $JAVA_OPTIONS \
-    -cp config/:libsec/*:alien4cloud-ui-${project.version}.war \
+    -cp config/:libsec/*:alien4cloud-premium-security-${project.version}.jar:alien4cloud-ui-${project.version}.war \
     org.springframework.boot.loader.WarLauncher
     "$@"
