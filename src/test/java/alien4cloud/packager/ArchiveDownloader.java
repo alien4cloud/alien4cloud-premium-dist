@@ -31,6 +31,7 @@ public class ArchiveDownloader {
         // FileUtil.zip(from, to);
         FileUtil.zip(gitDirectory.resolve("tosca-normative-types"), zipDirectory.resolve("tosca-normative-types.zip"));
         FileUtil.zip(gitDirectory.resolve("alien4cloud-extended-types/alien-base-types"), zipDirectory.resolve("alien-base-types.zip"));
+        FileUtil.zip(gitDirectory.resolve("alien4cloud-extended-types/alien-extended-storage-types"), zipDirectory.resolve("alien-extended-storage-types.zip"));
         FileUtil.zip(gitDirectory.resolve("alien4cloud-premium-types/alien-premium-storage-types"), zipDirectory.resolve("alien-premium-storage-types.zip"));
     }
 }
