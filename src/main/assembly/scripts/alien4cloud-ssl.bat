@@ -12,4 +12,4 @@ if "%JAVA_OPTIONS%" =="" (
 )
 
 cd "%~dp0"
-"%JAVA%" %JAVA_OPTIONS% -cp config/;libsec/*;alien4cloud-premium-security-${project.version}.jar;alien4cloud-ui-${project.version}.war org.springframework.boot.loader.WarLauncher %@
+"%JAVA%" %JAVA_OPTIONS% -cp config/;libsec/*;includes/*;alien4cloud-ui-${project.version}.war org.springframework.boot.loader.WarLauncher %@

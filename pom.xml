@@ -95,6 +95,7 @@
                         </goals>
                         <configuration>
                             <artifactItems>
+                              <!-- main alien4cloud -->
                                 <artifactItem>
                                     <groupId>alien4cloud</groupId>
                                     <artifactId>alien4cloud-ui</artifactId>
@@ -104,13 +105,24 @@
                                     <destFileName>alien4cloud-ui-${project.version}.war</destFileName>
                                     <outputDirectory>${project.build.directory}/alien</outputDirectory>
                                 </artifactItem>
+
+                                <!--  additionnal jar to include into the classpath-->
                                 <artifactItem>
                                     <groupId>alien4cloud</groupId>
                                     <artifactId>alien4cloud-premium-security</artifactId>
                                     <version>${project.version}</version>
                                     <destFileName>alien4cloud-premium-security-${project.version}.jar</destFileName>
-                                    <outputDirectory>${project.build.directory}/alien</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/includes</outputDirectory>
                                 </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.alien4cloud</groupId>
+                                    <artifactId>alien4cloud-ha</artifactId>
+                                    <version>${project.version}</version>
+                                    <destFileName>alien4cloud-ha-${project.version}.jar</destFileName>
+                                    <outputDirectory>${project.build.directory}/includes</outputDirectory>
+                                </artifactItem>
+
+                                <!-- plugins -->
                                 <artifactItem>
                                     <groupId>alien4cloud</groupId>
                                     <artifactId>alien4cloud-cloudify3-provider-premium</artifactId>
