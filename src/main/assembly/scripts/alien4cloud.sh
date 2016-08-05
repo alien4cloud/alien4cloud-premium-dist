@@ -25,5 +25,5 @@ fi
 
 $JAVA $JAVA_OPTIONS \
     -cp config/:includes/*:alien4cloud-ui-${project.version}.war \
-    org.springframework.boot.loader.WarLauncher
+    org.springframework.boot.loader.WarLauncher \
     "$@"
