@@ -107,6 +107,7 @@
                                 </artifactItem>
 
                                 <!--  additionnal jar to include into the classpath-->
+                                <!--
                                 <artifactItem>
                                     <groupId>alien4cloud</groupId>
                                     <artifactId>alien4cloud-premium-security</artifactId>
@@ -114,6 +115,7 @@
                                     <destFileName>alien4cloud-premium-security-${project.version}.jar</destFileName>
                                     <outputDirectory>${project.build.directory}/includes</outputDirectory>
                                 </artifactItem>
+                                -->
                                 <artifactItem>
                                     <groupId>org.alien4cloud</groupId>
                                     <artifactId>alien4cloud-ha</artifactId>
@@ -147,6 +149,7 @@
                                     <destFileName>alien4cloud-premium-logs-${project.version}.zip</destFileName>
                                     <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                                 </artifactItem>
+                                <!--
                                 <artifactItem>
                                     <groupId>alien4cloud</groupId>
                                     <artifactId>a4c-dashboard-plugin</artifactId>
@@ -155,6 +158,7 @@
                                     <destFileName>a4c-dashboard-plugin-${project.version}.zip</destFileName>
                                     <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                                 </artifactItem>
+                              -->
                             </artifactItems>
                         </configuration>
                     </execution>

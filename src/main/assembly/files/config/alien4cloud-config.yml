@@ -1,6 +1,7 @@
 # server section allows configuration of the listening port of the embedded jetty server.
 server:
   port: 8088
+  use-forward-headers: true
 # If you want to enable SSL comment the previous line and un-comment the following lines.
   #ssl:
   #  key-store: keystore.jks
