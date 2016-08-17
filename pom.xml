@@ -4,7 +4,7 @@
 
     <groupId>alien4cloud</groupId>
     <artifactId>alien4cloud-premium-dist</artifactId>
-    <version>1.2.1-SNAPSHOT</version>
+    <version>1.2.1</version>
 
     <name>Alien 4 Cloud Premium Distribution</name>
 
