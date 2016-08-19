@@ -137,6 +137,22 @@
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>alien4cloud</groupId>
+                                    <artifactId>alien4cloud-git-repository-plugin</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>zip</type>
+                                    <destFileName>alien4cloud-git-repository-plugin-${project.version}.zip</destFileName>
+                                    <outputDirectory>${project.build.directory}/plugins</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>alien4cloud</groupId>
+                                    <artifactId>alien4cloud-http-repository-plugin</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>zip</type>
+                                    <destFileName>alien4cloud-http-repository-plugin-${project.version}.zip</destFileName>
+                                    <outputDirectory>${project.build.directory}/plugins</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>alien4cloud</groupId>
                                     <artifactId>a4c-dashboard-plugin</artifactId>
                                     <version>${project.version}</version>
                                     <type>zip</type>
