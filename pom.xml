@@ -4,10 +4,10 @@
   <parent>
     <groupId>alien4cloud</groupId>
     <artifactId>alien4cloud-parent</artifactId>
-    <version>1.3.0-SM3</version>
+    <version>1.3.0-SM4-SNAPSHOT</version>
   </parent>
   <artifactId>alien4cloud-premium-dist</artifactId>
-  <version>1.3.0-SM3</version>
+  <version>1.3.0-SM4-SNAPSHOT</version>
   <name>Alien 4 Cloud Premium Distribution</name>
 
   <description>Package alien 4 cloud premium with correct structure and scripts.</description>
