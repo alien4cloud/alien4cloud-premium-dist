@@ -1,12 +1,14 @@
 # server section allows configuration of the listening port of the embedded jetty server.
 server:
   port: 8088
+  # Should be true when running behind a proxy (H.A. setting for example).
   use-forward-headers: true
 # If you want to enable SSL comment the previous line and un-comment the following lines.
-  #ssl:
-  #  key-store: keystore.jks
-  #  key-store-password: ******
-  #  key-password: ******
+#  port: 8443
+#  ssl:
+#    key-store: keystore.jks
+#    key-store-password: ******
+#    key-password: ******
 
 # Configuration of alien4cloud's CSAR repository, temporary folder and upload settings.
 directories:
@@ -56,10 +58,8 @@ elasticSearch:
   clusterName: escluster
   local: false
   client: false
-  transportClient: false
   resetData: false
   prefix_max_expansions: 10
-  hosts: localhost:9300
   # Start elasticsearch in transport client mode, it will not join the cluster and will not store any data
   # client: true
   # transportClient: true

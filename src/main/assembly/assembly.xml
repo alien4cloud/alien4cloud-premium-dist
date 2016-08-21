@@ -41,8 +41,8 @@
             </includes>
         </fileSet>
         <fileSet>
-            <directory>target/includes</directory>
-            <outputDirectory>includes</outputDirectory>
+            <directory>target/lib</directory>
+            <outputDirectory>lib</outputDirectory>
             <fileMode>0644</fileMode>
             <includes>
                 <include>**</include>
