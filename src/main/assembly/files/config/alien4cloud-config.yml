@@ -1,12 +1,12 @@
 # server section allows configuration of the listening port of the embedded jetty server.
 server:
   port: 8088
+  use-forward-headers: true
 # If you want to enable SSL comment the previous line and un-comment the following lines.
-#  port: 8443
-#  ssl:
-#    key-store: keystore.jks # Make sure that you have your key store placed along-side the alien4cloud war file.
-#    key-store-password: ******
-#    key-password: ******
+  #ssl:
+  #  key-store: keystore.jks
+  #  key-store-password: ******
+  #  key-password: ******
 
 # Configuration of alien4cloud's CSAR repository, temporary folder and upload settings.
 directories:
@@ -56,8 +56,10 @@ elasticSearch:
   clusterName: escluster
   local: false
   client: false
+  transportClient: false
   resetData: false
   prefix_max_expansions: 10
+  hosts: localhost:9300
   # Start elasticsearch in transport client mode, it will not join the cluster and will not store any data
   # client: true
   # transportClient: true
@@ -131,3 +133,25 @@ documentation:
 
 audit:
   ttl: 1d
+
+ha:
+  ha_enabled: false
+  consulAgentIp: localhost
+  consulAgentPort: 8500
+  # the ip that will be given to consul for health check (can be a private ip)
+  instanceIp: 127.0.0.1
+  # health will be checked by consul using this period
+  healthCheckPeriodInSecond: 5
+  # the TTL of consul session
+  consulSessionTTLInSecond: 60
+  # the delay between the session invalidation and the lock release
+  consulLockDelayInSecond: 0
+  # the delay before retrying to acquire lock when it fail
+  lockAcquisitionDelayInSecond: 20
+  consul_tls_enabled: false
+  keyStorePath: ""
+  trustStorePath: ""
+  keyStoresPwd: ""
+  serverProtocol: "http"
+  # The minimum free space to consider the system healthy (in bytes). Let's set the default to 10Mo
+  health_disk_space_threshold: 10485760
