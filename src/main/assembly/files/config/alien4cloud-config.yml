@@ -3,12 +3,12 @@ server:
   port: 8088
   # Should be true when running behind a proxy (H.A. setting for example).
   use-forward-headers: true
-# If you want to enable SSL comment the previous line and un-comment the following lines.
-#  port: 8443
-#  ssl:
-#    key-store: keystore.jks
-#    key-store-password: ******
-#    key-password: ******
+  # If you want to enable SSL comment the previous line and un-comment the following lines.
+  # port: 8443
+  # ssl:
+  #   key-store: keystore.jks
+  #   key-store-password: ******
+  #   key-password: ******
 loader:
   path: lib
 
