@@ -9,8 +9,6 @@ server:
   #   key-store: keystore.jks
   #   key-store-password: ******
   #   key-password: ******
-loader:
-  path: lib
 
 # Configuration of alien4cloud's CSAR repository, temporary folder and upload settings.
 directories:

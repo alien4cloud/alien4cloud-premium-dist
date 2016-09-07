@@ -103,28 +103,12 @@
                               <!-- main alien4cloud -->
                                 <artifactItem>
                                     <groupId>alien4cloud</groupId>
-                                    <artifactId>alien4cloud-ui</artifactId>
+                                    <artifactId>alien4cloud-premium-ui</artifactId>
                                     <version>${project.version}</version>
                                     <type>war</type>
                                     <classifier>standalone</classifier>
-                                    <destFileName>alien4cloud-ui-${project.version}.war</destFileName>
+                                    <destFileName>alien4cloud-premium-ui-${project.version}.war</destFileName>
                                     <outputDirectory>${project.build.directory}/alien</outputDirectory>
-                                </artifactItem>
-
-                                <!--  additionnal jar to include into the classpath-->
-                                <artifactItem>
-                                    <groupId>alien4cloud</groupId>
-                                    <artifactId>alien4cloud-premium-security</artifactId>
-                                    <version>${project.version}</version>
-                                    <destFileName>alien4cloud-premium-security-${project.version}.jar</destFileName>
-                                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.alien4cloud</groupId>
-                                    <artifactId>alien4cloud-ha</artifactId>
-                                    <version>${project.version}</version>
-                                    <destFileName>alien4cloud-ha-${project.version}.jar</destFileName>
-                                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
                                 </artifactItem>
 
                                 <!-- plugins -->
@@ -208,6 +192,20 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <overlays>
+                        <overlay>
+                            <groupId>alien4cloud</groupId>
+                            <artifactId>alien4cloud-ui</artifactId>
+                            <version>${project.version}</version>
+                        </overlay>
+                    </overlays>
+                </configuration>
+            </plugin>    
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
