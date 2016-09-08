@@ -11,8 +11,8 @@ if [ ! -x "$JAVA" ] ; then
   exit 1
 fi
 
-if [[ ! `ls alien4cloud-ui-${project.version}.war 2> /dev/null` ]] ; then
-  if [[ ! `ls alien4cloud-standalone/alien4cloud-ui-${project.version}.war 2> /dev/null` ]] ; then
+if [[ ! `ls alien4cloud-premium-ui-${project.version}.war 2> /dev/null` ]] ; then
+  if [[ ! `ls alien4cloud-standalone/alien4cloud-premium-ui-${project.version}.war 2> /dev/null` ]] ; then
     echo Command must be run from the directory where the WAR is installed or its parent.
     exit 4
   fi
@@ -24,6 +24,6 @@ if [ -z "$JAVA_OPTIONS" ] ; then
 fi
 
 $JAVA $JAVA_OPTIONS \
-    -cp config/:libsec/*:alien4cloud-premium-security-${project.version}.jar:alien4cloud-ui-${project.version}.war \
-    org.springframework.boot.loader.WarLauncher
+    -cp config/:libsec/*:alien4cloud-premium-ui-${project.version}.war \
+    org.springframework.boot.loader.WarLauncher \
     "$@"

@@ -41,6 +41,14 @@
             </includes>
         </fileSet>
         <fileSet>
+            <directory>target/lib</directory>
+            <outputDirectory>lib</outputDirectory>
+            <fileMode>0644</fileMode>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+        <fileSet>
             <directory>target/plugins</directory>
             <outputDirectory>init/plugins</outputDirectory>
             <fileMode>0644</fileMode>
