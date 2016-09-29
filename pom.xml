@@ -168,6 +168,14 @@
                                     <destFileName>a4c-dashboard-plugin-${project.version}.zip</destFileName>
                                     <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                                 </artifactItem>
+                                <artifactItem>
+                                    <groupId>alien4cloud</groupId>
+                                    <artifactId>alien4cloud-premium-workspace</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>zip</type>
+                                    <destFileName>alien4cloud-premium-workspace-${project.version}.zip</destFileName>
+                                    <outputDirectory>${project.build.directory}/plugins</outputDirectory>
+                                </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
