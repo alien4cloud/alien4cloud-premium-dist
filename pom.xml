@@ -110,7 +110,16 @@
                                     <destFileName>alien4cloud-premium-ui-${project.version}.war</destFileName>
                                     <outputDirectory>${project.build.directory}/alien</outputDirectory>
                                 </artifactItem>
-
+                                <!-- main alien4cloud -->
+                                <artifactItem>
+                                    <groupId>alien4cloud</groupId>
+                                    <artifactId>alien4cloud-premium-ui-ssl</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>war</type>
+                                    <classifier>standalone</classifier>
+                                    <destFileName>alien4cloud-premium-ui-${project.version}-ssl.war</destFileName>
+                                    <outputDirectory>${project.build.directory}/alien</outputDirectory>
+                                </artifactItem>
                                 <!-- plugins -->
                                 <artifactItem>
                                     <groupId>alien4cloud</groupId>
@@ -183,25 +192,6 @@
                                   <type>zip</type>
                                   <destFileName>alien4cloud-marathon-plugin-${project.version}.zip</destFileName>
                                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>unpack-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>unpack</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>com.floragunn</groupId>
-                                    <artifactId>search-guard-ssl</artifactId>
-                                    <version>${search-guard-ssl.version}</version>
-                                    <type>zip</type>
-                                    <destFileName>search-guard-ssl-${search-guard-ssl.version}.zip</destFileName>
-                                    <outputDirectory>${project.build.directory}/alien/libsec</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
