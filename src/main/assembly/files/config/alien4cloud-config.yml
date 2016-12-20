@@ -105,6 +105,7 @@ saml:
   enabled: false
   maxAuthenticationAge: 7200
   maxAssertionTime: 3000
+  # logoutUrl: http://alien4cloud.org
 #  proxy:
 #    host: 193.56.47.20
 #    port: 8080
@@ -121,6 +122,10 @@ saml:
       # entityBaseURL: defaults to localhost:8088
       # requestSigned:
       # wantAssertionSigned:
+#  mapping:
+#    email: EmailAddress
+#    firstname: FirstName
+#    lastname: LastName
 
 # configuration for the upload module.
 upload:
