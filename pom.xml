@@ -123,6 +123,14 @@
                 <!-- plugins -->
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
+                  <artifactId>alien4cloud-cloudify3-provider-premium</artifactId>
+                  <version>${project.version}</version>
+                  <type>zip</type>
+                  <destFileName>alien4cloud-cloudify3-provider-${project.version}.zip</destFileName>
+                  <outputDirectory>${project.build.directory}/plugins</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-cloudify4-provider-premium</artifactId>
                   <version>${project.version}</version>
                   <type>zip</type>
