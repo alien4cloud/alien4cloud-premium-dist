@@ -52,6 +52,8 @@ components.search.boost:
   default: 10
   # define in hours at what frequency the components boost should be recalculated.
   frequency: 24
+  # boost when component names are similar to the query (only use for NodeType)
+  name_query_similitude: 100
 
 # Configuration of the elastic search cluster.
 elasticSearch:
