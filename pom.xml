@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>alien4cloud</groupId>
@@ -40,7 +41,6 @@
     <java.version>1.7</java.version>
     <maven.compiler.version>2.3.2</maven.compiler.version>
     <search-guard-ssl.version>1.7.0</search-guard-ssl.version>
-    <cfy3.plugin.version>1.4.1</cfy3.plugin.version>
   </properties>
 
   <dependencies>
@@ -122,14 +122,6 @@
                   <outputDirectory>${project.build.directory}/alien</outputDirectory>
                 </artifactItem>
                 <!-- plugins -->
-                <artifactItem>
-                  <groupId>alien4cloud</groupId>
-                  <artifactId>alien4cloud-cloudify3-provider-premium</artifactId>
-                  <version>${cfy3.plugin.version}</version>
-                  <type>zip</type>
-                  <destFileName>alien4cloud-cloudify3-provider-${cfy3.plugin.version}.zip</destFileName>
-                  <outputDirectory>${project.build.directory}/plugins</outputDirectory>
-                </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-cloudify4-provider-premium</artifactId>
