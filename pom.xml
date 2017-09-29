@@ -4,12 +4,12 @@
   <parent>
     <groupId>alien4cloud</groupId>
     <artifactId>alien4cloud-parent</artifactId>
-    <version>1.4.2</version>
+    <version>1.4.2.1</version>
   </parent>
 
   <groupId>alien4cloud</groupId>
   <artifactId>alien4cloud-premium-dist</artifactId>
-  <version>1.4.2</version>
+  <version>1.4.2.1</version>
   <name>Alien 4 Cloud Premium Distribution</name>
 
   <description>Package alien 4 cloud premium with correct structure and scripts.</description>
@@ -41,6 +41,7 @@
     <maven.compiler.version>2.3.2</maven.compiler.version>
     <search-guard-ssl.version>1.7.0</search-guard-ssl.version>
     <cfy3.plugin.version>1.4.1</cfy3.plugin.version>
+    <plugins.version>1.4.2</plugins.version>
   </properties>
 
   <dependencies>
@@ -133,79 +134,79 @@
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-cloudify4-provider-premium</artifactId>
-                  <version>${project.version}</version>
+                  <version>${plugins.version}</version>
                   <type>zip</type>
-                  <destFileName>alien4cloud-cloudify4-provider-${project.version}.zip</destFileName>
+                  <destFileName>alien4cloud-cloudify4-provider-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-migration-plugin</artifactId>
-                  <version>${project.version}</version>
+                  <version>${plugins.version}</version>
                   <type>zip</type>
-                  <destFileName>alien4cloud-migration-plugin-${project.version}.zip</destFileName>
+                  <destFileName>alien4cloud-migration-plugin-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-portability-insights</artifactId>
-                  <version>${project.version}</version>
+                  <version>${plugins.version}</version>
                   <type>zip</type>
-                  <destFileName>alien4cloud-portability-insights-${project.version}.zip</destFileName>
+                  <destFileName>alien4cloud-portability-insights-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-premium-logs</artifactId>
-                  <version>${project.version}</version>
+                  <version>${plugins.version}</version>
                   <type>zip</type>
-                  <destFileName>alien4cloud-premium-logs-${project.version}.zip</destFileName>
+                  <destFileName>alien4cloud-premium-logs-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-git-repository-plugin</artifactId>
-                  <version>${project.version}</version>
+                  <version>${plugins.version}</version>
                   <type>zip</type>
-                  <destFileName>alien4cloud-git-repository-plugin-${project.version}.zip</destFileName>
+                  <destFileName>alien4cloud-git-repository-plugin-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-http-repository-plugin</artifactId>
-                  <version>${project.version}</version>
+                  <version>${plugins.version}</version>
                   <type>zip</type>
-                  <destFileName>alien4cloud-http-repository-plugin-${project.version}.zip</destFileName>
+                  <destFileName>alien4cloud-http-repository-plugin-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-maven-repository-plugin</artifactId>
-                  <version>${project.version}</version>
+                  <version>${plugins.version}</version>
                   <type>zip</type>
-                  <destFileName>alien4cloud-maven-repository-plugin-${project.version}.zip</destFileName>
+                  <destFileName>alien4cloud-maven-repository-plugin-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>a4c-dashboard-plugin</artifactId>
-                  <version>${project.version}</version>
+                  <version>${plugins.version}</version>
                   <type>zip</type>
-                  <destFileName>a4c-dashboard-plugin-${project.version}.zip</destFileName>
+                  <destFileName>a4c-dashboard-plugin-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-premium-workspace</artifactId>
-                  <version>${project.version}</version>
+                  <version>${plugins.version}</version>
                   <type>zip</type>
-                  <destFileName>alien4cloud-premium-workspace-${project.version}.zip</destFileName>
+                  <destFileName>alien4cloud-premium-workspace-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-marathon-plugin</artifactId>
-                  <version>${project.version}</version>
+                  <version>${plugins.version}</version>
                   <type>zip</type>
                   <destFileName>alien4cloud-marathon-plugin-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
