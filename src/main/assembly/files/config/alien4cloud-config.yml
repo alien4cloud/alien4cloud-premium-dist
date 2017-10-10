@@ -156,12 +156,20 @@ ha:
   # the delay before retrying to acquire lock when it fail
   lockAcquisitionDelayInSecond: 20
   consul_tls_enabled: false
+  # key store for SSL connection to consul
   keyStorePath: ""
+  keyStorePwd: ""
+  # truststore for SSL connection to consul
   trustStorePath: ""
-  keyStoresPwd: ""
+  trustStorePwd: ""
   serverProtocol: "http"
   # The minimum free space to consider the system healthy (in bytes). Let's set the default to 10Mo
   health_disk_space_threshold: 10485760
+  consulQueryTimeoutInMin: 3
+  # TCP connection timeout when querying consul, default: 30 seconds
+  consulConnectTimeoutInMillis: 30000
+  # TCP read timeout when querying consul: default: 5 minutes
+  consulReadTimeoutInMillis: 300000
 
 logs_deployment_appender:
   enable: true
