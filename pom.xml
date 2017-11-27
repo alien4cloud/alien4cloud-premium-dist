@@ -209,6 +209,14 @@
                   <destFileName>alien4cloud-kubernetes-plugin-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
+                <artifactItem>
+                  <groupId>alien4cloud</groupId>
+                  <artifactId>alien4cloud-vault-plugin</artifactId>
+                  <version>${project.version}</version>
+                  <type>zip</type>
+                  <destFileName>alien4cloud-vault-plugin-${project.version}.zip</destFileName>
+                  <outputDirectory>${project.build.directory}/plugins</outputDirectory>
+                </artifactItem>
               </artifactItems>
             </configuration>
           </execution>
