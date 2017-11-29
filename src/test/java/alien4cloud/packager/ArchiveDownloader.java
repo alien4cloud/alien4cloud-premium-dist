@@ -19,12 +19,16 @@ public class ArchiveDownloader {
         Path gitDirectory = buildDirectory.resolve("git");
         Path zipDirectory = buildDirectory.resolve("archives");
 
-        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/tosca-normative-types.git", "1.4.0", "tosca-normative-types");
-        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/alien4cloud-extended-types.git", "1.4.0",
+        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/tosca-normative-types.git", "2.0.0-SM4", "tosca-normative-types");
+        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/alien4cloud-extended-types.git", "2.0.0-SM4",
                 "alien4cloud-extended-types");
 
+        // docker types
+        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/docker-tosca-types.git", "2.0.0-SM4",
+                "docker-tosca-types");
+
         // premium storages types
-        RepositoryManager.cloneOrCheckout(gitDirectory, "https://fastconnect.org/gitlab/alien4cloud/alien4cloud-premium-types.git", username, password, "1.4.0",
+        RepositoryManager.cloneOrCheckout(gitDirectory, "https://fastconnect.org/gitlab/alien4cloud/alien4cloud-premium-types.git", username, password, "2.0.0-SM4",
                 "alien4cloud-premium-types");
 
         // zip archives
@@ -32,6 +36,7 @@ public class ArchiveDownloader {
         FileUtil.zip(gitDirectory.resolve("tosca-normative-types"), zipDirectory.resolve("tosca-normative-types.zip"));
         FileUtil.zip(gitDirectory.resolve("alien4cloud-extended-types/alien-base-types"), zipDirectory.resolve("alien-base-types.zip"));
         FileUtil.zip(gitDirectory.resolve("alien4cloud-extended-types/alien-extended-storage-types"), zipDirectory.resolve("alien-extended-storage-types.zip"));
+        FileUtil.zip(gitDirectory.resolve("docker-tosca-types/docker-types"), zipDirectory.resolve("docker-tosca-types.zip"));
         FileUtil.zip(gitDirectory.resolve("alien4cloud-premium-types/alien-premium-storage-types"), zipDirectory.resolve("alien-premium-storage-types.zip"));
     }
 }

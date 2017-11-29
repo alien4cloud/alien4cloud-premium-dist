@@ -82,5 +82,11 @@
             <destName>4-alien-premium-storage-types.zip</destName>
             <fileMode>0644</fileMode>
         </file>
+        <file>
+            <source>target/archives/docker-tosca-types.zip</source>
+            <outputDirectory>init/archives</outputDirectory>
+            <destName>5-docker-tosca-types.zip</destName>
+            <fileMode>0644</fileMode>
+        </file>
     </files>
 </assembly>
