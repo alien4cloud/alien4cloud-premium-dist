@@ -129,14 +129,14 @@
                   <destFileName>alien4cloud-cloudify4-provider-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
-                <!-- <artifactItem>
+                <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-migration-plugin</artifactId>
                   <version>${project.version}</version>
                   <type>zip</type>
                   <destFileName>alien4cloud-migration-plugin-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
-                </artifactItem> -->
+                </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-portability-insights</artifactId>
