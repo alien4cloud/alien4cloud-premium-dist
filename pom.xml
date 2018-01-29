@@ -22,7 +22,7 @@
   </repositories>
 
   <scm>
-    <connection>scm:git:https://fastconnect.org/gitlab/alien4cloud/alien4cloud-premium-dist.git</connection>
+    <connection>scm:git:https://fastconnect.org/a4c-gitlab/alien4cloud-premium/alien4cloud-premium-dist.git</connection>
   </scm>
 
   <distributionManagement>
@@ -207,6 +207,14 @@
                   <version>${project.version}</version>
                   <type>zip</type>
                   <destFileName>alien4cloud-kubernetes-plugin-${project.version}.zip</destFileName>
+                  <outputDirectory>${project.build.directory}/plugins</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>alien4cloud</groupId>
+                  <artifactId>alien4cloud-security-group-plugin</artifactId>
+                  <version>${project.version}</version>
+                  <type>zip</type>
+                  <destFileName>alien4cloud-security-group-plugin-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
                 <artifactItem>
