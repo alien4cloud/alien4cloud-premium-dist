@@ -27,6 +27,7 @@ public class ArchiveDownloader {
         RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/docker-tosca-types.git", "2.0.0",
                 "docker-tosca-types");
 
+		System.out.println("User: " + username + " wants to clone alien4cloud-premium-types.");
         // premium storages types
         RepositoryManager.cloneOrCheckout(gitDirectory, "http://fastconnect.org/a4c-gitlab/alien4cloud-premium/alien4cloud-premium-types.git", username, password, "2.0.0",
                 "alien4cloud-premium-types");
