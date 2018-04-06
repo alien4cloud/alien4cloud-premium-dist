@@ -28,7 +28,7 @@ public class ArchiveDownloader {
                 "docker-tosca-types");
 
         // premium storages types
-        RepositoryManager.cloneOrCheckout(gitDirectory, "https://fastconnect.org/gitlab/alien4cloud/alien4cloud-premium-types.git", username, password, "2.0.0",
+        RepositoryManager.cloneOrCheckout(gitDirectory, "http://fastconnect.org/a4c-gitlab/alien4cloud-premium/alien4cloud-premium-types.git", username, password, "2.0.0",
                 "alien4cloud-premium-types");
 
         // zip archives
