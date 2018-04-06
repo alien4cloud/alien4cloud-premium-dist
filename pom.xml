@@ -83,8 +83,8 @@
           <classpathScope>test</classpathScope>
           <arguments>
             <argument>${project.build.directory}</argument>
-            <argument>alien4cloud-os</argument>
-            <argument>Op3nSt@ck_@L1eN</argument>
+            <argument>liguobao</argument>
+            <argument>lgb13539783913</argument>
           </arguments>
         </configuration>
       </plugin>
