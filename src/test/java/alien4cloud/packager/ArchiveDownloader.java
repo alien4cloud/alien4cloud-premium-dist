@@ -19,12 +19,12 @@ public class ArchiveDownloader {
         Path gitDirectory = buildDirectory.resolve("git");
         Path zipDirectory = buildDirectory.resolve("archives");
 
-        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/tosca-normative-types.git", "2.0.0", "tosca-normative-types");
-        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/alien4cloud-extended-types.git", "master",
+        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/tosca-normative-types.git", Version.PROJECT_VERSION, "tosca-normative-types");
+        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/alien4cloud-extended-types.git", Version.PROJECT_VERSION,
                 "alien4cloud-extended-types");
 
         // docker types
-        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/docker-tosca-types.git", "master",
+        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/docker-tosca-types.git", Version.PROJECT_VERSION,
                 "docker-tosca-types");
 
         // premium storages types

@@ -173,3 +173,7 @@ ha:
 
 logs_deployment_appender:
   enable: true
+
+languages:
+  default: en-us
+  prefix: locale
