@@ -150,7 +150,7 @@ ha:
   # health will be checked by consul using this period
   healthCheckPeriodInSecond: 5
   # the TTL of consul session
-  consulSessionTTLInSecond: 60
+  consulSessionTTLInSecond: 600
   # the delay between the session invalidation and the lock release
   consulLockDelayInSecond: 0
   # the delay before retrying to acquire lock when it fail

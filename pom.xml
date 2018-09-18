@@ -4,12 +4,12 @@
   <parent>
     <groupId>alien4cloud</groupId>
     <artifactId>alien4cloud-parent</artifactId>
-    <version>1.4.4-SNAPSHOT</version>
+    <version>1.4.5-SNAPSHOT</version>
   </parent>
 
   <groupId>alien4cloud</groupId>
   <artifactId>alien4cloud-premium-dist</artifactId>
-  <version>1.4.4-SNAPSHOT</version>
+  <version>1.4.5-SNAPSHOT</version>
   <name>Alien 4 Cloud Premium Distribution</name>
 
   <description>Package alien 4 cloud premium with correct structure and scripts.</description>
@@ -40,8 +40,8 @@
     <java.version>1.7</java.version>
     <maven.compiler.version>2.3.2</maven.compiler.version>
     <search-guard-ssl.version>1.7.0</search-guard-ssl.version>
-    <cfy3.plugin.version>1.4.4-CFY34-SNAPSHOT</cfy3.plugin.version>
-    <plugins.version>1.4.4-SNAPSHOT</plugins.version>
+    <cfy3.plugin.version>1.4.4-CFY34</cfy3.plugin.version>
+    <plugins.version>1.4.4</plugins.version>
   </properties>
 
   <dependencies>
@@ -203,6 +203,7 @@
                   <destFileName>alien4cloud-premium-workspace-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
+<!--
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-marathon-plugin</artifactId>
@@ -211,6 +212,7 @@
                   <destFileName>alien4cloud-marathon-plugin-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
+-->
               </artifactItems>
             </configuration>
           </execution>
