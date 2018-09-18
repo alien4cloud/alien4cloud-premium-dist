@@ -40,8 +40,8 @@
     <java.version>1.7</java.version>
     <maven.compiler.version>2.3.2</maven.compiler.version>
     <search-guard-ssl.version>1.7.0</search-guard-ssl.version>
-    <cfy3.plugin.version>1.4.4-CFY34</cfy3.plugin.version>
-    <plugins.version>1.4.4</plugins.version>
+    <cfy3.plugin.version>1.4.5-CFY34-SNAPSHOT</cfy3.plugin.version>
+    <plugins.version>1.4.5-SNAPSHOT</plugins.version>
   </properties>
 
   <dependencies>
