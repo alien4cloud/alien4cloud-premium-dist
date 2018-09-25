@@ -155,14 +155,14 @@
                   <destFileName>alien4cloud-portability-insights-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
                 </artifactItem>
-                <!-- <artifactItem>
+                <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-premium-logs</artifactId>
                   <version>${plugins.version}</version>
                   <type>zip</type>
                   <destFileName>alien4cloud-premium-logs-${plugins.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
-                </artifactItem> -->
+                </artifactItem>
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-git-repository-plugin</artifactId>
