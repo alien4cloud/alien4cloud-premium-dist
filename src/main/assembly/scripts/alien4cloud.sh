@@ -22,6 +22,7 @@ fi
 if [ -z "$JAVA_OPTIONS" ] ; then
     JAVA_OPTIONS="-server -showversion -XX:+AggressiveOpts -Xmx2g -Xms2g -XX:+HeapDumpOnOutOfMemoryError -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+ScavengeBeforeFullGC -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC"
 fi
+JAVA_OPTIONS="$JAVA_OPTIONS -Des.path.home=runtime/elasticsearch -Dmapper.allow_dots_in_name=true"
 
 # $JAVA_EXT_OPTIONS are extended JVM options than can be filled before A4C start
 $JAVA $JAVA_OPTIONS $JAVA_EXT_OPTIONS \
