@@ -33,6 +33,14 @@
             </includes>
         </fileSet>
         <fileSet>
+            <directory>src/main/assembly/runtime</directory>
+            <outputDirectory>runtime</outputDirectory>
+            <fileMode>0644</fileMode>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+        <fileSet>
             <directory>target/alien</directory>
             <outputDirectory></outputDirectory>
             <fileMode>0644</fileMode>
