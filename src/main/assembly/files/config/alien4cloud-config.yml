@@ -141,6 +141,10 @@ documentation:
 audit:
   ttl: 1d
 
+# TTL scanning period in seconds (default 1 day)
+ttl:
+  period: 86400
+
 ha:
   ha_enabled: false
   consulAgentIp: localhost
