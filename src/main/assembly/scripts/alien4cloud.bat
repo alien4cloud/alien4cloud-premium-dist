@@ -13,4 +13,4 @@ if "%JAVA_OPTIONS%" =="" (
 @set JAVA_OPTIONS=%JAVA_OPTIONS% -Dlog4j.configurationFile=log4j2.xml
 
 cd "%~dp0"
-"%JAVA%" %JAVA_OPTIONS% -cp config/;alien4cloud-premium-ui-${project.version}-ssl.war org.springframework.boot.loader.WarLauncher %@
+"%JAVA%" %JAVA_OPTIONS% -cp config/;alien4cloud-premium-ui-${project.version}.war org.springframework.boot.loader.WarLauncher %@

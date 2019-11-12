@@ -100,7 +100,6 @@
             <configuration>
               <artifactItems>
                 <!-- main alien4cloud -->
-                <!--
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-premium-ui</artifactId>
@@ -110,7 +109,6 @@
                   <destFileName>alien4cloud-premium-ui-${project.version}.war</destFileName>
                   <outputDirectory>${project.build.directory}/alien</outputDirectory>
                 </artifactItem>
-                -->
                 <!-- main alien4cloud -->
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
