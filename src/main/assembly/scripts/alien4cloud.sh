@@ -11,8 +11,8 @@ if [ ! -x "$JAVA" ] ; then
   exit 1
 fi
 
-if [[ ! `ls alien4cloud-premium-ui-${project.version}-ssl.war 2> /dev/null` ]] ; then
-  if [[ ! `ls alien4cloud-standalone/alien4cloud-premium-ui-${project.version}-ssl.war 2> /dev/null` ]] ; then
+if [[ ! `ls alien4cloud-premium-ui-${project.version}.war 2> /dev/null` ]] ; then
+  if [[ ! `ls alien4cloud-standalone/alien4cloud-premium-ui-${project.version}.war 2> /dev/null` ]] ; then
     echo Command must be run from the directory where the WAR is installed or its parent.
     exit 4
   fi
@@ -26,6 +26,6 @@ JAVA_OPTIONS="$JAVA_OPTIONS -Dlog4j.configurationFile=log4j2.xml"
 
 # $JAVA_EXT_OPTIONS are extended JVM options than can be filled before A4C start
 $JAVA $JAVA_OPTIONS $JAVA_EXT_OPTIONS \
-    -cp config/:alien4cloud-premium-ui-${project.version}-ssl.war \
+    -cp config/:alien4cloud-premium-ui-${project.version}.war \
     org.springframework.boot.loader.WarLauncher \
     "$@"
