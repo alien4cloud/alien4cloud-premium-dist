@@ -23,20 +23,12 @@ public class ArchiveDownloader {
         RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/alien4cloud-extended-types.git", Version.PROJECT_VERSION,
                 "alien4cloud-extended-types");
 
-        // docker types
-        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/docker-tosca-types.git", Version.PROJECT_VERSION,
-                "docker-tosca-types");
-
-        // premium storages types
-        RepositoryManager.cloneOrCheckout(gitDirectory, "http://fastconnect.org/a4c-gitlab/alien4cloud-premium/alien4cloud-premium-types.git", username, password, "2.0.0",
-                "alien4cloud-premium-types");
-
         // zip archives
         // FileUtil.zip(from, to);
         FileUtil.zip(gitDirectory.resolve("tosca-normative-types"), zipDirectory.resolve("tosca-normative-types.zip"));
         FileUtil.zip(gitDirectory.resolve("alien4cloud-extended-types/alien-base-types"), zipDirectory.resolve("alien-base-types.zip"));
         FileUtil.zip(gitDirectory.resolve("alien4cloud-extended-types/alien-extended-storage-types"), zipDirectory.resolve("alien-extended-storage-types.zip"));
-        FileUtil.zip(gitDirectory.resolve("docker-tosca-types/docker-types"), zipDirectory.resolve("docker-tosca-types.zip"));
-        FileUtil.zip(gitDirectory.resolve("alien4cloud-premium-types/alien-premium-storage-types"), zipDirectory.resolve("alien-premium-storage-types.zip"));
+        FileUtil.zip(gitDirectory.resolve("alien4cloud-extended-types/docker-types"), zipDirectory.resolve("docker-tosca-types.zip"));
+        FileUtil.zip(gitDirectory.resolve("alien4cloud-extended-types/alien-premium-storage-types"), zipDirectory.resolve("alien-premium-storage-types.zip"));
     }
 }
