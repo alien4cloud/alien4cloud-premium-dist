@@ -110,7 +110,7 @@
                   <outputDirectory>${project.build.directory}/alien</outputDirectory>
                 </artifactItem>
                 <!-- main alien4cloud -->
-                <artifactItem>
+                <!-- <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-premium-ui-ssl</artifactId>
                   <version>${project.version}</version>
@@ -118,7 +118,7 @@
                   <classifier>standalone</classifier>
                   <destFileName>alien4cloud-premium-ui-${project.version}-ssl.war</destFileName>
                   <outputDirectory>${project.build.directory}/alien</outputDirectory>
-                </artifactItem>
+                </artifactItem> -->
                 <!-- plugins -->
                 <!--
                 <artifactItem>
