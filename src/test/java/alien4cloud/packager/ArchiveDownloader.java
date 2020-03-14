@@ -19,8 +19,8 @@ public class ArchiveDownloader {
         Path gitDirectory = buildDirectory.resolve("git");
         Path zipDirectory = buildDirectory.resolve("archives");
 
-        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/tosca-normative-types.git", Version.PROJECT_VERSION, "tosca-normative-types");
-        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/alien4cloud-extended-types.git", Version.PROJECT_VERSION,
+        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/tosca-normative-types.git", Version.TOSCA_NORMATIVE_TYPES_VERSION, "tosca-normative-types");
+        RepositoryManager.cloneOrCheckout(gitDirectory, "https://github.com/alien4cloud/alien4cloud-extended-types.git", Version.EXTENDED_TYPE_VERSION,
                 "alien4cloud-extended-types");
 
         // zip archives
