@@ -22,7 +22,7 @@
   </repositories>
 
   <scm>
-    <connection>scm:git:https://fastconnect.org/a4c-gitlab/alien4cloud-premium/alien4cloud-premium-dist.git</connection>
+    <connection>scm:git:https://github.com/alien4cloud/alien4cloud-premium-dist.git</connection>
   </scm>
 
   <distributionManagement>
