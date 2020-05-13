@@ -1,61 +1,51 @@
-
-index:
-  number_of_shards: 1
-  number_of_replicas: 0
-
 path:
-# Path to load configuration files, this will be used by search guard as root directory to load keys and certificates which is relative
-  data: runtime/elasticsearch/data
-  work: runtime/elasticsearch/work
-  logs: runtime/elasticsearch/logs
-  conf: config
+  home: runtime/elasticsearch
 
-gateway:
-  recover_after_nodes: 1
-  expected_nodes: 1
+transport:
+  type: mock-socket-network
 
-# Bind elasticsearch on which ip
-#network.host: _eth0:ipv4_
-# bind only to localhost, so we aren't visible and we don't multicast discover others
-network.host: localhost
+cluster:
+  name: escluster
 
-# could instead/also disable multicast discovery or even unicast discovery;
-# not necessary for localhost config but may be useful for cross-server deployment
-#discovery.zen.ping.multicast.enabled: false
-#discovery.zen.ping.unicast.enabled: false
-#discovery.zen.ping.unicast.hosts: localhost
+http:
+  enabled: true
+node:
+  name: alien
+network:
+  host: 0.0.0.0
 
-# Search guard SSL configuration
 
-# Activate client authentication, it means that http client will have to present certificate in order to query elasticsearch rest api
-searchguard.ssl.http.clientauth_mode: REQUIRE
+# # Search guard SSL configuration
 
-# If openssl available on the machine, will it be used to manage ssl of the http rest endpoint
-searchguard.ssl.http.enable_openssl_if_available: false
+# # Activate client authentication, it means that http client will have to present certificate in order to query elasticsearch rest api
+# searchguard.ssl.http.clientauth_mode: REQUIRE
 
-# Use ssl for http rest endpoint ?
-searchguard.ssl.http.enabled: true
+# # If openssl available on the machine, will it be used to manage ssl of the http rest endpoint
+# searchguard.ssl.http.enable_openssl_if_available: false
 
-# The private key for http rest endpoint (relative path to path.conf key)
-searchguard.ssl.http.keystore_filepath: client-keystore.jks
+# # Use ssl for http rest endpoint ?
+# searchguard.ssl.http.enabled: true
 
-# Certificate for http rest endpoint (relative path to path.conf key)
-searchguard.ssl.http.truststore_filepath: server-truststore.jks
+# # The private key for http rest endpoint (relative path to path.conf key)
+# searchguard.ssl.http.keystore_filepath: client-keystore.jks
 
-# If openssl available on the machine, will it be used to manage ssl of the transport communication between elasticsearch nodes
-searchguard.ssl.transport.enable_openssl_if_available: false
+# # Certificate for http rest endpoint (relative path to path.conf key)
+# searchguard.ssl.http.truststore_filepath: server-truststore.jks
 
-# Use ssl for transport communication between elasticsearch nodes
-searchguard.ssl.transport.enabled: true
+# # If openssl available on the machine, will it be used to manage ssl of the transport communication between elasticsearch nodes
+# searchguard.ssl.transport.enable_openssl_if_available: false
 
-# Check host name of presented ssl certificates
-searchguard.ssl.transport.enforce_hostname_verification: false
+# # Use ssl for transport communication between elasticsearch nodes
+# searchguard.ssl.transport.enabled: true
 
-# Try to resolve host name
-searchguard.ssl.transport.resolve_hostname: false
+# # Check host name of presented ssl certificates
+# searchguard.ssl.transport.enforce_hostname_verification: false
 
-# The private key for transport communication (relative path to path.conf key)
-searchguard.ssl.transport.keystore_filepath: client-keystore.jks
+# # Try to resolve host name
+# searchguard.ssl.transport.resolve_hostname: false
 
-# Certificate for transport communication (relative path to path.conf key)
-searchguard.ssl.transport.truststore_filepath: server-truststore.jks
+# # The private key for transport communication (relative path to path.conf key)
+# searchguard.ssl.transport.keystore_filepath: client-keystore.jks
+
+# # Certificate for transport communication (relative path to path.conf key)
+# searchguard.ssl.transport.truststore_filepath: server-truststore.jks

@@ -63,10 +63,12 @@ elasticSearch:
   resetData: false
   prefix_max_expansions: 10
   # Start elasticsearch in transport client mode, it will not join the cluster and will not store any data
-  client: true
-  transportClient: true
+  client: false
+  transportClient: false
   # a comma separated list of host:port couples
   hosts: localhost:9300
+  shard_count: 1
+  replica_count: 0
 
 # Configuration of default admin ensurer, if true it creates a default admin user if no admin can be found in the system.
 alien_security:
