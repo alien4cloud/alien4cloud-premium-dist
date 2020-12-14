@@ -20,9 +20,9 @@ if [[ ! `ls alien4cloud-premium-ui-${project.version}.war 2> /dev/null` ]] ; the
 fi
 
 if [ -z "$JAVA_OPTIONS" ] ; then
-    JAVA_OPTIONS="-server -showversion -XX:+AggressiveOpts -Xmx2g -Xms2g -XX:+HeapDumpOnOutOfMemoryError -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+ScavengeBeforeFullGC -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC"
+    JAVA_OPTIONS="-server -showversion -Xmx2g -Xms2g -XX:+HeapDumpOnOutOfMemoryError -XX:+UseG1GC -XX:InitiatingHeapOccupancyPercent=75 -XX:-G1UseAdaptiveIHOP -XX:+ScavengeBeforeFullGC -XX:+DisableExplicitGC"
 fi
-JAVA_OPTIONS="$JAVA_OPTIONS -Dlog4j.configurationFile=log4j2.xml"
+JAVA_OPTIONS="$JAVA_OPTIONS -Dlog4j.configurationFile=log4j2.xml --illegal-access=warn"
 
 # $JAVA_EXT_OPTIONS are extended JVM options than can be filled before A4C start
 $JAVA $JAVA_OPTIONS $JAVA_EXT_OPTIONS \
