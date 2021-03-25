@@ -39,8 +39,6 @@
   <properties>
     <tosca-normative-types.version>1.0.0-ALIEN20</tosca-normative-types.version>
     <alien4cloud.extended-types.version>3.0.0</alien4cloud.extended-types.version>
-    <java.version>1.7</java.version>
-    <maven.compiler.version>2.3.2</maven.compiler.version>
   </properties>
 
   <dependencies>
@@ -58,8 +56,7 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven.compiler.version}</version>
         <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <release>${java.version}</release>
         </configuration>
       </plugin>
       <plugin>
