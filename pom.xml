@@ -9,7 +9,7 @@
 
   <groupId>alien4cloud</groupId>
   <artifactId>alien4cloud-premium-dist</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <name>Alien 4 Cloud Premium Distribution</name>
 
   <description>Package alien 4 cloud premium with correct structure and scripts.</description>
@@ -47,7 +47,7 @@
     <dependency>
       <groupId>alien4cloud</groupId>
       <artifactId>alien4cloud-core</artifactId>
-      <version>${project.version}</version>
+      <version>3.0.0</version>
     </dependency>
   </dependencies>
 
@@ -150,7 +150,7 @@
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-git-repository-plugin</artifactId>
-                  <version>${project.version}</version>
+                  <version>3.0.0</version>
                   <type>zip</type>
                   <destFileName>alien4cloud-git-repository-plugin-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
@@ -158,7 +158,7 @@
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-http-repository-plugin</artifactId>
-                  <version>${project.version}</version>
+                  <version>3.0.0</version>
                   <type>zip</type>
                   <destFileName>alien4cloud-http-repository-plugin-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
@@ -166,7 +166,7 @@
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-maven-repository-plugin</artifactId>
-                  <version>${project.version}</version>
+                  <version>3.0.0</version>
                   <type>zip</type>
                   <destFileName>alien4cloud-maven-repository-plugin-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
@@ -183,7 +183,7 @@
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-premium-workspace</artifactId>
-                  <version>${project.version}</version>
+                  <version>3.0.0</version>
                   <type>zip</type>
                   <destFileName>alien4cloud-premium-workspace-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
@@ -199,7 +199,7 @@
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-kubernetes-plugin</artifactId>
-                  <version>${project.version}</version>
+                  <version>3.0.0</version>
                   <type>zip</type>
                   <destFileName>alien4cloud-kubernetes-plugin-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
@@ -215,7 +215,7 @@
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-vault-plugin</artifactId>
-                  <version>${project.version}</version>
+                  <version>3.0.0</version>
                   <type>zip</type>
                   <destFileName>alien4cloud-vault-plugin-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
@@ -223,7 +223,7 @@
                 <artifactItem>
                   <groupId>alien4cloud</groupId>
                   <artifactId>alien4cloud-yorc-provider</artifactId>
-                  <version>${project.version}</version>
+                  <version>3.0.0</version>
                   <type>zip</type>
                   <destFileName>alien4cloud-yorc-provider-${project.version}.zip</destFileName>
                   <outputDirectory>${project.build.directory}/plugins</outputDirectory>
@@ -280,3 +280,4 @@
     </plugins>
   </build>
 </project>
+
